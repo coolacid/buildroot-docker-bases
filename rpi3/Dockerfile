@@ -1,4 +1,4 @@
 FROM debian:buster-slim
 
-ENV VERSION $VERSION
+ARG VERSION=master
 RUN echo "Building version: ${VERSION}"
