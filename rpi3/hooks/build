@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source $DOCKERFILE_PATH/../vars
+source ../vars
 
 docker build --build-arg VERSION=$VERSION -f $DOCKERFILE_PATH -t $IMAGE_NAME .
