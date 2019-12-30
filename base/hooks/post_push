@@ -1,0 +1,7 @@
+#!/bin/bash
+
+BUILD_TRIGGERS="rpi3"
+
+for TAG in $(echo $BUILD_TRIGGERS | sed "s/,/ /g"); do
+  curl -X POST -H "Content-Type: application/json" --data "{ \"build\": true, \"docker_tag\": \"$TAG\" }" $TRIGGERURL
+done
